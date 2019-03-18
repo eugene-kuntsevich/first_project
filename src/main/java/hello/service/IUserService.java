@@ -1,5 +1,7 @@
 package hello.service;
 
+import hello.model.User;
+
 public interface IUserService {
-    boolean login(String name, String password);
+    User findOne(Long id);
 }

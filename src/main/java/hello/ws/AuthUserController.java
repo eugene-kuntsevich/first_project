@@ -1,6 +1,6 @@
 package hello.ws;
 
-import hello.service.IUserService;
+import hello.service.IAuthUserService;
 import hello.ws.request.UserLoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,10 +15,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @RequestMapping("/user")
 public class AuthUserController implements WebMvcConfigurer {
 
-    private IUserService userService;
+    private IAuthUserService userService;
 
     @Autowired
-    public AuthUserController(IUserService userService) {
+    public AuthUserController(IAuthUserService userService) {
         this.userService = userService;
     }
 
